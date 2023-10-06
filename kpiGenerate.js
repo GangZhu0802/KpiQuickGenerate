@@ -40,7 +40,7 @@ function getRandomExpression(){
   let result = '';
   if(expressionLen > 0){
     for(let i =0; i< expressionLen; i++){
-      result += (sensorPrefix + Math.floor(Math.random() * 100));
+      result += `"${(sensorPrefix + Math.floor(Math.random() * 100))}"`;
       if(i+1 < expressionLen){
         const randomNum = parseInt(Math.random()*3)
         result += ` ${operators[randomNum]} `;
